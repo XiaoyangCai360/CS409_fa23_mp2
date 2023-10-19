@@ -1,7 +1,6 @@
 import ListContent from "./ListContent";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useFetch from "./useFetch";
-import SearchBar from "./SearchBar";
 
 const ListPage = () => {
     const [page, setPage] = useState(1);

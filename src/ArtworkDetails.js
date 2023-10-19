@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import DetailContent from "./DetailContent";
 import useFetch from "./useFetch";
 import { useHistory } from "react-router-dom";
@@ -15,6 +14,8 @@ const ArtworkDetails = () => {
 
     const {data: artworkList, isPendingList} = useFetch('https://api.artic.edu/api/v1/artworks?limit=100');
     
+    console.log(isPendingList);
+
     // console.log(artworkList && artworkList.map(item => item.id));
 
     const handlePrevClick = () => {
