@@ -1,13 +1,176 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  	margin: 0;
+  	font-family: "Quicksand";
+  	color: #333;
+}
+.navbar {
+  	padding: 20px;
+  	display: flex;
+  	align-items: center;
+  	max-width: 80%;
+  	margin: 0 auto;
+  	border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  	color: #f1356d;
+}
+.navbar .links {
+  	margin-left: auto;
+}
+.navbar a {
+ 	margin-left: 16px;
+  	text-decoration: none;
+  	padding: 6px;
+}
+.navbar a:hover {
+  	color: #f1356d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content {
+	max-width: 80%;
+	margin: 10px auto;
+	padding: 20px;
+}
+
+/* list previews */
+.artwork-list {
+ 	padding: 10px 16px;
+	margin: 20px 0;
+ 	border-bottom: 1px solid #fafafa;
+	display: flex;
+	height: 200px;
+}
+
+.artwork-list:hover {
+	cursor: pointer;
+}
+
+.list-img-container {
+	width: 200px;
+	height: 100%;
+}
+
+.list-img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.artwork-list:hover {
+  	box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.artwork-list h2 {
+  	font-size: 20px;
+  	color: #f1356d;
+  	margin-bottom: 20px;
+}
+
+.list-brief-container {
+	justify-content: center;
+	margin-left: 40px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	max-width: 70%;
+} 
+
+/* gallery card previews */
+.gallery-card-container {
+	margin: 1.5rem auto;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	grid-gap: 1rem;
+}
+
+.gallery-card{
+  	color: white;
+  	position: relative;
+  	padding: 1.5px;
+	height: 250px;
+}
+
+.gallery-card:hover {
+  	box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+
+.gallery-card img{
+  	border: none;
+  	width: 100%;
+  	height: 100%;
+  	transition: 0.5s;
+	object-fit: fill;
+}
+
+.gallery-card:hover img{
+    transform: scale(1.1);
+}
+
+.page-select {
+	display: flex;
+	flex-direction: row;
+	width: 20%;
+	margin: 0 auto;
+}
+
+.page-select label {
+	display: block;
+	margin-right: 5%;
+}
+
+.page-select select {
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+  	display: block;
+}
+
+/* Artwork Detail View */
+.artwork-detail-container {
+	width: 95%;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #ddd;
+	display: flex;
+	flex-direction: column;
+}
+
+.artwork-detail-img {
+	margin: 30px auto 10px;
+	width: 80%;
+}
+
+.artwork-detail-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.artwork-detail-info-container {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.artwork-detail-info-container h2 {
+	text-align: center;
+	font-size: 25px;
+	margin: 10px auto;
+}
+
+.artwork-detail-shortlist {
+	font-size: 15px;
+	text-align: left;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	grid-gap: 2rem;
+	margin: 2rem auto;
+}
+
+
+.artwork-detail-longlist {
+	margin: 2rem auto;
 }
