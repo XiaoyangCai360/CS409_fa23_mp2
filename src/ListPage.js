@@ -18,7 +18,7 @@ const ListPage = () => {
             artwork.title.toLowerCase().includes(query)
             // || artwork.place_of_origin.toLowerCase().includes(query)
             || artwork.artwork_type_title.toLowerCase().includes(query)
-            || artwork.department_title.toLowerCase().includes(query)
+            // || artwork.department_title.toLowerCase().includes(query)
         );
     }
     // const handleClick = (e) => {
@@ -81,7 +81,7 @@ const ListPage = () => {
             <div className="list-header-container">
                 <div className="list-search-bar">
                     <form>
-                        <input type="text" placeholder="Search Artworks by Title, Artwork Type, Department"
+                        <input type="text" placeholder="Search Artworks by Title or Artwork Type"
                             onChange={e => setQuery(e.target.value)}
                         />
                     </form>
