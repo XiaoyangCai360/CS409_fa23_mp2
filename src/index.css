@@ -16,6 +16,7 @@
 }
 .navbar h1 {
   	color: #f1356d;
+	display: none;
 }
 .navbar .links {
   	margin-left: auto;
@@ -27,6 +28,18 @@
 }
 .navbar a:hover {
   	color: #f1356d;
+}
+
+.navbar .logo-container {
+	width: 80px;
+}
+
+.navbar .logo-container img {
+	object-fit: contain;
+}
+
+.navbar .logo-container:hover {
+	cursor: pointer;
 }
 
 .content {
@@ -77,6 +90,63 @@
 	flex-direction: column;
 	max-width: 70%;
 } 
+
+.list-search-bar input{
+	width: 40%;
+	margin: 10px auto;
+	border-radius: 3px;
+	height: 20px;
+}
+
+.list-sort-selector select{
+	width: 10%;
+}
+
+.list-sort-selector select:hover {
+	cursor: pointer;
+}
+
+.list-sort-asc-desc {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 0;
+}
+.list-sort-asc {
+	margin-right: 20px;
+}
+
+.list-sort-asc label {
+	margin-right: 5px;
+}
+
+.list-sort-asc input {
+	width: 20px;
+}
+
+.list-sort-asc input:hover {
+	cursor: pointer;
+}
+
+.list-sort-desc input {
+	width: 20px;
+}
+
+.list-sort-desc input:hover {
+	cursor: pointer;
+}
+
+.list-sort-desc label {
+	margin-right: 5px;
+}
+
+.list-sort-container button {
+	border-radius: 5px;
+	width: 10%;
+}
+
+.list-sort-container button:hover {
+	cursor: pointer;
+}
 
 /* gallery card previews */
 .gallery-card-container {
@@ -173,4 +243,17 @@
 
 .artwork-detail-longlist {
 	margin: 2rem auto;
+}
+
+.gallery-sort-select select:hover{
+	cursor: pointer;
+}
+
+.page-select select:hover {
+	cursor: pointer;
+}
+
+/* Artwork detail page */
+.artwork-detail-buttons button:hover {
+	cursor: pointer;
 }

@@ -54,21 +54,21 @@ const ListPage = () => {
             if (ascDescOption === 'asc') {
                 // sort date
                 if (sortOption === 'date_start') {
-                    artworks.sort((a,b) =>  a.date_start - b.date_start );
+                    artworks.sort((a, b) => a.date_start - b.date_start);
                 }
                 // sort title
                 if (sortOption === 'title') {
-                    artworks.sort((a,b) =>  (a.title > b.title ? 1 : -1) );
+                    artworks.sort((a, b) => (a.title > b.title ? 1 : -1));
                 }
             } else {
                 // DESC sort
                 // sort date
                 if (sortOption === 'date_start') {
-                    artworks.sort((a,b) =>  b.date_start - a.date_start );
+                    artworks.sort((a, b) => b.date_start - a.date_start);
                 }
                 // sort title
                 if (sortOption === 'title') {
-                    artworks.sort((a,b) =>  (a.title < b.title ? 1 : -1) );
+                    artworks.sort((a, b) => (a.title < b.title ? 1 : -1));
                 }
             }
         }
@@ -100,20 +100,24 @@ const ListPage = () => {
                             </select>
                         </div>
                         <div className="list-sort-asc-desc">
-                            <label>Ascending</label>
-                            <input type="radio" value="asc" checked={ascDescOption === 'asc'}
-                            onChange={e => setAscDescOption('asc')}
-                            />
-                            <label>Descending</label>
-                            <input type="radio" value="desc" checked={ascDescOption === 'desc'}
-                            onChange={e => setAscDescOption('desc')}
-                            />
+                            <div className="list-sort-asc">
+                                <label>Ascending</label>
+                                <input type="radio" value="asc" checked={ascDescOption === 'asc'}
+                                    onChange={e => setAscDescOption('asc')}
+                                />
+                            </div>
+                            <div className="list-sort-desc">
+                                <label>Descending</label>
+                                <input type="radio" value="desc" checked={ascDescOption === 'desc'}
+                                    onChange={e => setAscDescOption('desc')}
+                                />
+                            </div>
                         </div>
                         {/* <button type="submit" onClick={e => {
                             e.preventDefault();
                             setSort(!sort);}}
                             >Apply</button> */}
-                            <button type="submit" onClick={handleClick}>Apply</button>
+                        <button type="submit" onClick={handleClick}>Apply</button>
                     </form>
                 </div>
             </div>
